@@ -1,0 +1,14 @@
+#PBS -N train_cnn
+#PBS -q gpu-n1h72
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=72:00:00
+#PBS -M ireniuxgp@gmail.com
+#PBS -m bea
+
+cd $PBS_O_WORKDIR
+
+module load intelpython/3.5
+module load cuda/9.0.176
+module load cudnn-9/7.0.4
+
+python /home/igamboa/thesis/train_cnn.py
